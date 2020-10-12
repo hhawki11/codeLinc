@@ -1,0 +1,146 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    margin-left: 10%;
+}
+
+li {
+    display: inline;
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 5;
+}
+
+li button:hover {
+    background-color: black;
+}
+
+.active {
+    background-color: lightskyblue;
+}
+
+.head {
+    height: 50px; 
+    padding-top: 0px;
+    text-align: center;
+    visibility: visible;
+    
+    background-color: #00fc86;
+    border: 1px outset black;
+}
+
+.infoHeading {
+    font-family: 'Zilla Slab', serif;
+    font-weight: 400;
+    font-size: 25.6px;
+    border: 3px outset blue;
+    margin-top: 7px;
+}
+
+.navWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    color: white;
+    overflow: hidden;
+    height: 98px;
+}
+
+.nav {
+    display: flex;
+    list-style-type: none;
+}
+
+li {
+    opacity: 1;
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.msgPic {    
+    float: right;
+}
+
+.flashDiv {
+    border: 5px outset red;
+    height: 2000px;
+    width: 200px;
+    float: left;
+}
+
+.resourcesDiv {
+    border: 5px outset red;
+    float: left;
+    width: 1457px;
+    height: 2000px;
+}
+
+.bigDiv {
+    border: 5px outset red;
+    height: 2000px;
+    width: 200px;
+    float: right;
+}
+
+.fixedHeader {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+div.navPlaceholder {
+    border: 1px outset red;
+    height: 140px;
+}
+
+
+
+.message {
+    border: 1px outset green;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.msgHeader1 {
+   
+   border: 1px outset green;
+}
+
+.flashButton {
+    width: 100;
+    height: 50;
+    float: right;
+}
+
+.msgFooter {
+    border: 1px outset blue;
+}
+
+.deckPreview {
+    border: 1px outset green;
+}
+
+.previewHeader {
+    border: 1px outset blue;
+}
+.previewFooter {
+    border: 1px outset blue;
+}
