@@ -1,3 +1,7 @@
+body {
+    background-color: #00fc86;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -74,29 +78,30 @@ li {
     transition: all 0.3s ease-in-out;
 }
 
-.msgPic {    
-    float: right;
-}
+
 
 .flashDiv {
-    border: 5px outset red;
+    border: 5px outset black;
     height: 2000px;
-    width: 200px;
+    width: 10.59%;
     float: left;
+    background-color: white;
 }
 
 .resourcesDiv {
-    border: 5px outset red;
+    border: 5px outset black;
     float: left;
-    width: 1457px;
+    width: 77.22%;
     height: 2000px;
+    background-color: white;
 }
 
 .bigDiv {
-    border: 5px outset red;
+    border: 5px outset black;
     height: 2000px;
-    width: 200px;
+    width: 10.59%;
     float: right;
+    background-color: white;
 }
 
 .fixedHeader {
@@ -111,27 +116,34 @@ div.navPlaceholder {
     height: 140px;
 }
 
-
-
 .message {
-    border: 1px outset green;
-    padding-left: 10px;
-    padding-right: 10px;
+    border: 2px outset black;
+    padding-bottom: 0px;
 }
-
+.msgPic {    
+    float: right;
+}
 .msgHeader1 {
-   
-   border: 1px outset green;
+   border: 0px outset green;
+}
+.msgFooter {
+    border: 0px outset blue;
+}
+.sendMessage {
+    height: 25px;
+    width: 100px;
+    margin-left: 48px;
+    margin-top: 10px;
+}
+.writeMessage {
+    margin-left: 12px;
+    margin-top: 10px;
 }
 
 .flashButton {
     width: 100;
     height: 50;
     float: right;
-}
-
-.msgFooter {
-    border: 1px outset blue;
 }
 
 .deckPreview {
@@ -144,3 +156,4 @@ div.navPlaceholder {
 .previewFooter {
     border: 1px outset blue;
 }
+

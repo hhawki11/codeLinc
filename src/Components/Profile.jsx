@@ -1,15 +1,15 @@
 import React from "react";
-import FlashSystem from "./FlashSystem";
-import BigPanel from "./BigPanel.jsx"
-import Resources from "./Resources"
+import FlashSystem from "./Flashcards/FlashSystem";
+import MessagePanel from "./Messages/MessagePanel.jsx"
+import Content from "./Main/Content"
 
 function Profile() {
     return(
         <div className="container">
             <div className="mainDiv">            
                 <FlashSystem />
-                <Resources />
-                <BigPanel />
+                <Content />
+                <MessagePanel />
             </div>
         </div>
     );

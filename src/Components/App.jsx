@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Header";
+import Header from "./Navigation/Header";
 import Profile from "./Profile";
 
 function App() {
