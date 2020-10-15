@@ -1,4 +1,17 @@
-const bigmsg = [
+import { wait } from "@testing-library/react";
+
+    var bigmsg;
+    /*fetch ("http://localhost:8080/rest/messages/all")
+        .then(
+            response => console.log(response.json().)
+        );*/
+    bigmsg = fetch('http://localhost:8080/rest/messages/all')
+        .then(response => response.json())
+        .then(data => console.log(data));
+        
+    console.log("bigmsg is" + bigmsg.data);
+
+const bdadwadigmsg = [
     {
         id: 4,
         message: "Hello Test",

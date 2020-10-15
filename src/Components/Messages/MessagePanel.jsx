@@ -18,10 +18,17 @@ function createMsg(message) {
 
 function MessagePanel() {
     const [msg, setMsg] = useState("");
-    const [messages, setMessages] = useState(bigmsg);
+    const [messages, setMessages] = useState([]);
+    console.log(bigmsg);
+    
+    //pull from json
+
+    
+
+   
 
     function addNewMessage() {
-        var newKey = messages[0].id + 1;
+        //var newKey = messages[0].id + 1;
         
         var today = new Date();
         var currentDate = today.toLocaleDateString().replaceAll("/", "-");
@@ -29,7 +36,7 @@ function MessagePanel() {
         var currentTime = today.toString().substring(16,24);
         var currentTimestamp = currentDate + "T" + currentTime + ".000+00:00";
         //var currentTime = today.getHours() + ":" + (today.getMinutes() > 10 ? today.getMinutes() : "0" + today.getMinutes());
-        const newMessage = {id: newKey, message: msg, timestamp: currentTimestamp};
+        const newMessage = {id: 10, message: msg, timestamp: currentTimestamp};
 
         //update the json file
         setMessages(messages => [newMessage, ...messages]);
