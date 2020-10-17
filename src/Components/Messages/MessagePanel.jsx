@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Message from "./Message";
-import bigmsg from "../../bigmsg";
+import getData from "./messageGet";
+import postData from "./messagePost";
 
 function createMsg(message) {
     const timestamp = message.timestamp.substring(11,16);
@@ -19,27 +20,27 @@ function createMsg(message) {
 function MessagePanel() {
     const [msg, setMsg] = useState("");
     const [messages, setMessages] = useState([]);
-    console.log(bigmsg);
     
-    //pull from json
+    window.addEventListener('load', function() {
+        fetchMessages();
+    });
+    window.addEventListener('click', function() {
+        fetchMessages();
+    });
 
-    
+    //console.log(setInterval(fetchMessages(), 1000));
 
-   
+    function fetchMessages() {
+        getData().then(response => response.json().then(data => setMessages(data)));
+    }
 
-    function addNewMessage() {
-        //var newKey = messages[0].id + 1;
-        
-        var today = new Date();
-        var currentDate = today.toLocaleDateString().replaceAll("/", "-");
-        currentDate =  currentDate.substring(6,10) + currentDate.substring(5,6) + currentDate.substring(0,5);
-        var currentTime = today.toString().substring(16,24);
-        var currentTimestamp = currentDate + "T" + currentTime + ".000+00:00";
-        //var currentTime = today.getHours() + ":" + (today.getMinutes() > 10 ? today.getMinutes() : "0" + today.getMinutes());
-        const newMessage = {id: 10, message: msg, timestamp: currentTimestamp};
-
-        //update the json file
-        setMessages(messages => [newMessage, ...messages]);
+    //add case for long message!
+    function addNewMessage() {       
+        postData(msg).then(fetchMessages()).then({
+            fetchMessages(){}
+            //fetch, notify, dont clear
+         });    
+           
     }
 
     function setsMsg(event) {
