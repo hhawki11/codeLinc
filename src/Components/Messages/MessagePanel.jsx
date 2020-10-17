@@ -24,11 +24,6 @@ function MessagePanel() {
     window.addEventListener('load', function() {
         fetchMessages();
     });
-    window.addEventListener('click', function() {
-        fetchMessages();
-    });
-
-    //console.log(setInterval(fetchMessages(), 1000));
 
     function fetchMessages() {
         getData().then(response => response.json().then(data => setMessages(data)));
@@ -36,11 +31,7 @@ function MessagePanel() {
 
     //add case for long message!
     function addNewMessage() {       
-        postData(msg).then(fetchMessages()).then({
-            fetchMessages(){}
-            //fetch, notify, dont clear
-         });    
-           
+        postData(msg).then(response => response.json()).then(data => setMessages(data));    
     }
 
     function setsMsg(event) {
