@@ -41,7 +41,6 @@ li button:hover {
     padding-top: 0px;
     text-align: center;
     visibility: visible;
-    
     background-color: #00fc86;
     border: 1px outset black;
 }
@@ -50,7 +49,6 @@ li button:hover {
     font-family: 'Zilla Slab', serif;
     font-weight: 400;
     font-size: 25.6px;
-  
     margin-top: 7px;
 }
 
@@ -78,32 +76,6 @@ li {
     transition: all 0.3s ease-in-out;
 }
 
-
-
-.flashDiv {
-    border: 5px outset black;
-    height: 2000px;
-    width: 10.59%;
-    float: left;
-    background-color: white;
-}
-
-.resourcesDiv {
-    border: 5px outset black;
-    float: left;
-    width: 77.22%;
-    height: 2000px;
-    background-color: white;
-}
-
-.bigDiv {
-    border: 5px outset black;
-    height: 2000px;
-    width: 10.59%;
-    float: right;
-    background-color: white;
-}
-
 .fixedHeader {
     width: 100%;
     position: fixed;
@@ -116,8 +88,55 @@ div.navPlaceholder {
     height: 140px;
 }
 
+.header {
+    grid-area: head;
+}
+
+.flashButton {
+    width: 100;
+    height: 50;
+    float: right;
+}
+
+.deckPreview {
+    border-top: 2px outset black;
+    border-bottom: 2px outset black;
+}
+
+.previewHeader {
+    overflow: scroll;
+}
+.previewFooter {
+    overflow: scroll;
+}
+
+.reviewFull {
+    border: 1px outset blue;
+}
+.resourcesFull {
+    border: 1px outset red;
+    height: 500px;
+}
+
+.flashDiv {
+    grid-area: deck;
+    height: 800px;
+    overflow-y: scroll;
+    border: 5px outset black;
+    background-color: white;
+}
+
+.bigDiv {
+    grid-area: mess;
+    border: 5px outset black;
+    height: 800px;
+    overflow-y: scroll;
+    background-color: white;
+}
+
 .message {
-    border: 2px outset black;
+    border-top: 2px outset black;
+    border-bottom: 2px outset black;
     padding-bottom: 0px;
 }
 .msgPic {    
@@ -136,33 +155,26 @@ div.navPlaceholder {
     margin-top: 10px;
 }
 .writeMessage {
-    margin-left: 12px;
-    margin-top: 10px;
+    width: 90%;
+    margin: 5%;
 }
 
-.flashButton {
-    width: 100;
-    height: 50;
-    float: right;
+h2 {
+    width: 70%;
+    overflow: scroll;
 }
 
-.deckPreview {
-    border: 1px outset green;
+.mainDiv {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "deck main mess";
 }
 
-.previewHeader {
-    border: 1px outset blue;
-}
-.previewFooter {
-    border: 1px outset blue;
-}
-
-.reviewFull {
-    border: 1px outset blue;
-}
-.resourcesFull {
-    border: 1px outset red;
-    height: 500px;
+.resourcesDiv {
+    grid-area: main;
+    border-top: 5px outset black;
+    border-bottom: 5px outset black;
+    background-color: white;
 }
 
 .dictionary {
@@ -172,6 +184,7 @@ div.navPlaceholder {
     margin: 4rem auto;
     max-width: 90%;
 }
+
 .dictionary > .term {
     text-align: center;
     max-width: 20rem;
@@ -182,6 +195,7 @@ div.navPlaceholder {
     background-color: #fff;
     transition: all 100ms ease-in-out;
 }
+
 .dictionary > .term > dt {
     margin-bottom: 1rem;
 }

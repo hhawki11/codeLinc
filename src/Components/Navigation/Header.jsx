@@ -5,7 +5,7 @@ import Nav from "./Nav";
 
 function Header() {
     return (
-        <div>
+        <div className="header">
             <div className="fixedHeader">
                 <div className="head">
                     <h1 className="infoHeading">
