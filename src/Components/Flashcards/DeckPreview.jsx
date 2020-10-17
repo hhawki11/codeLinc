@@ -45,25 +45,27 @@ function DeckPreview(props) {
 
     return(
         <div className="cards">
-            <div>
+            <div className="deckDesc">
                 <button onClick={loadDeck}>Trivia!</button>
                 <h2 className="previewHeader" >{props.name}</h2>
+                <h3 className="previewFooter">{props.description}</h3>
             </div>
-            <h3 className="previewFooter">{props.description}</h3>
-            <input 
-                onChange={setsTerm}
-                type="text"
-                placeholder="Term"
-                className="writeMessage"
-            />
-            <input 
-                onChange={setsDef}
-                type="text"
-                placeholder="Definition"
-                className="writeMessage"
-            />
-            <button onClick={addNewCard} className="sendMessage">Add</button>
-            <dl>{cards.map(loadCards)}</dl>
+            <div className ="cardInput">
+                <input 
+                    onChange={setsTerm}
+                    type="text"
+                    placeholder="Term"
+                    className="writeTerm"
+                />
+                <input 
+                    onChange={setsDef}
+                    type="text"
+                    placeholder="Definition"
+                    className="writeDefinition"
+                />
+                <button onClick={addNewCard} className="sendCard">Add</button>
+            </div>
+            <dl className="cardsOverflow">{cards.map(loadCards)}</dl>
         </div>
     );
 }

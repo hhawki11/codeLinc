@@ -123,7 +123,7 @@ div.navPlaceholder {
 .flashDiv {
     grid-area: deck;
     height: 800px;
-    overflow-y: auto;
+    overflow-y: scroll;
     border: 5px outset black;
     background-color: white;
 }
@@ -182,21 +182,63 @@ h2 {
 .cards {
     border-top: 2px outset black;
     border-bottom: 2px outset black;
-    overflow-y: auto;
+    overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: .8fr 2fr 1fr;
     grid-template-areas: 
-        "term cards"
-        "def cards";
+        "deckDesc cards cardInput"
+}
+
+.deckDesc {
+    grid-area: deckDesc;
+}
+
+.cardInput {
+    grid-area: cardInput;
 }
 
 .card {
-    overflow: auto;
+    border: 2px outset black;
+    grid-area: cards;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    border: 2px outset black;
+    margin-right: 10px;
+}
+
+.cardTerm {
+    grid-area: cardTerm;
+    grid-column: 1/2;
 }
 
 .cardDef {
     border-left: 2px outset black;
+    grid-area: cardDef;
+    grid-column: 2/3;
+}
+
+.cardInput {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "inputDef"
+        "inputTerm"
+        "cardButton";
+}
+
+.writeTerm {
+    grid-area: inputDef;
+}
+
+.writeDefinition {
+    grid-area: inputTerm;
+}
+
+.sendCard {
+    grid-area: cardButton;
+}
+
+.cardsOverflow {
+    max-height: 200px;
+    min-height: 200px;
+    overflow-y: auto;
 }

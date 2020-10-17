@@ -7,8 +7,8 @@ function Card(props) {
     
     return (
         <div className="card">
-            <div className ="cardTerm">{props.term}</div>
-            <div className = "cardDef">{props.definition}</div>
+            <div className="cardTerm">{props.term}</div>
+            <div className="cardDef">{props.definition}</div>
         </div>
     );
 }
