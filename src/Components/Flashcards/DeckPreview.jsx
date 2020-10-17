@@ -26,9 +26,9 @@ function DeckPreview(props) {
     }
 
     return(
-        <div className="resourcesFull">
+        <div className="cards">
             <div>
-                <button onClick={loadDeck}></button>
+                <button onClick={loadDeck}>Trivia!</button>
                 <h2 className="previewHeader" >{props.name}</h2>
             </div>
             <h3 className="previewFooter">{props.description}</h3>

@@ -104,9 +104,11 @@ div.navPlaceholder {
 }
 
 .previewHeader {
+    grid-area: term;
     overflow: hidden;
 }
 .previewFooter {
+    grid-area: def;
     overflow: hidden;
 }
 
@@ -121,7 +123,7 @@ div.navPlaceholder {
 .flashDiv {
     grid-area: deck;
     height: 800px;
-    overflow-y: scroll;
+    overflow-y: auto;
     border: 5px outset black;
     background-color: white;
 }
@@ -177,25 +179,24 @@ h2 {
     background-color: white;
 }
 
-.dictionary {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 4rem auto;
-    max-width: 90%;
+.cards {
+    border-top: 2px outset black;
+    border-bottom: 2px outset black;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+        "term cards"
+        "def cards";
 }
 
-.dictionary > .term {
-    text-align: center;
-    max-width: 20rem;
-    margin-bottom: 3rem;
-    padding: 2rem;
-    border-radius: 3px;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    transition: all 100ms ease-in-out;
+.card {
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: 2px outset black;
 }
 
-.dictionary > .term > dt {
-    margin-bottom: 1rem;
+.cardDef {
+    border-left: 2px outset black;
 }

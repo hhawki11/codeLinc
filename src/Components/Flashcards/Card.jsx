@@ -6,11 +6,9 @@ function Card(props) {
     //spaced repition
     
     return (
-        <div className="term">
-            <dt>
-                <span>{props.term}</span>
-            </dt>
-            <dd>{props.definition}</dd>
+        <div className="card">
+            <div className ="cardTerm">{props.term}</div>
+            <div className = "cardDef">{props.definition}</div>
         </div>
     );
 }
