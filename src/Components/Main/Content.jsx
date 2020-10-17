@@ -5,7 +5,7 @@ import Resources from "./Resources";
 function Content() {
     return(
         <div className="resourcesDiv">
-            <Review />
+            
             <Resources />
         </div>
     );

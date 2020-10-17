@@ -8,7 +8,7 @@ function Profile() {
         <div className="container">
             <div className="mainDiv">            
                 <FlashSystem />
-                <Content />
+                
                 <MessagePanel />
             </div>
         </div>
