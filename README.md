@@ -21,7 +21,7 @@ How to run:
   * Install mySQL workbench
   * In mySQL worckbench, create a new connection at 127.0.0.1:3306
     with username: "root" and password: "password". Next, in the connection,
-    create a database with the name "codelinc".
+    create a database with the name "CodeLink".
     * Next, locate the Administration tab and select Data Import / Restore.
     * In here, select import from Dump Project Folder and select the folder
     * named "db dump files". When selected make sure that all tables are also selected
