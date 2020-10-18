@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driveClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/CodeLink?serverTimezone=UTC
+    username: root
+    password: password
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
